@@ -1,0 +1,113 @@
+/* Modal Overlay */
+.system-admin-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal Content */
+.system-admin-modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  max-width: 90%;
+}
+
+/* Form Elements */
+.system-admin-dashboard-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.system-admin-dashboard-field {
+  margin-bottom: 15px;
+}
+
+.system-admin-dashboard-label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.system-admin-dashboard-input,
+.system-admin-dashboard-select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.system-admin-dashboard-button {
+  background-color: #28a745; /* Green color for system admin button */
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.system-admin-dashboard-button:hover {
+  background-color: #218838;
+}
+
+/* Close button styling */
+.system-admin-modal-close {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.system-admin-modal-close:hover {
+  background-color: #c82333;
+}
+
+/* Dashboard Text and Button */
+.system-admin-dashboard-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.system-admin-dashboard-welcome {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.system-admin-dashboard-add-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.system-admin-dashboard-add-button:hover {
+  background-color: #0056b3;
+}
+
+/* Messages */
+.system-admin-dashboard-message {
+  color: green;
+  margin-top: 10px;
+}
+
+.system-admin-dashboard-error {
+  color: red;
+  margin-top: 10px;
+}

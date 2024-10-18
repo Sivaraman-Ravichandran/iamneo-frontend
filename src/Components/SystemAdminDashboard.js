@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import './Styles/HR.css'; // Import your CSS file
+import './Styles/SystemAdmin.css'; // Import the SystemAdmin CSS file
 
-function HRDashboard() {
+function SystemAdminDashboard() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [role, setRole] = useState("employee");
@@ -18,7 +18,7 @@ function HRDashboard() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ email, password, role,}),
+        body: JSON.stringify({ email, password, role }),
       });
 
       const data = await response.json();
@@ -44,54 +44,55 @@ function HRDashboard() {
   };
 
   return (
-    <div className="hr-dashboard-container">
-      <h2 className="hr-dashboard-title">HR Dashboard</h2>
-      <p className="hr-dashboard-welcome">Welcome to the HR Dashboard! You can create users here.</p>
-      <button className="hr-dashboard-add-button" onClick={toggleModal}>Add Users</button>
+    <div className="system-admin-dashboard-container">
+      <h2 className="system-admin-dashboard-title">System Admin Dashboard</h2>
+      <p className="system-admin-dashboard-welcome">Welcome to the System Admin Dashboard! You can create users here.</p>
+      <button className="system-admin-dashboard-add-button" onClick={toggleModal}>Add Users</button>
 
       {/* Modal */}
       {showModal && (
-        <div className="hr-modal-overlay">
-          <div className="hr-modal-content">
+        <div className="system-admin-modal-overlay">
+          <div className="system-admin-modal-content">
             <h3>Add User</h3>
-            <form className="hr-dashboard-form" onSubmit={handleCreateUser}>
-             
-              <div className="hr-dashboard-field">
-                <label className="hr-dashboard-label">Email:</label>
+            <form className="system-admin-dashboard-form" onSubmit={handleCreateUser}>
+              <div className="system-admin-dashboard-field">
+                <label className="system-admin-dashboard-label">Email:</label>
                 <input
                   type="email"
-                  className="hr-dashboard-input"
+                  className="system-admin-dashboard-input"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
                 />
               </div>
-              <div className="hr-dashboard-field">
-                <label className="hr-dashboard-label">Password:</label>
+              <div className="system-admin-dashboard-field">
+                <label className="system-admin-dashboard-label">Password:</label>
                 <input
                   type="password"
-                  className="hr-dashboard-input"
+                  className="system-admin-dashboard-input"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   required
                 />
               </div>
-              <div className="hr-dashboard-field">
-                <label className="hr-dashboard-label">Role:</label>
+              <div className="system-admin-dashboard-field">
+                <label className="system-admin-dashboard-label">Role:</label>
                 <select
-                  className="hr-dashboard-select"
+                  className="system-admin-dashboard-select"
                   value={role}
                   onChange={(e) => setRole(e.target.value)}
                 >
                   <option value="employee">Employee</option>
                   <option value="team_manager">Team Manager</option>
+                  <option value="hr">HR</option>
+                  <option value="system_admin">System Admin</option>
                 </select>
               </div>
-              <button type="submit" className="hr-dashboard-button">Create User</button>
-              {message && <p className="hr-dashboard-message">{message}</p>}
-              {error && <p className="hr-dashboard-error">{error}</p>}
+              <button type="submit" className="system-admin-dashboard-button">Create User</button>
+              {message && <p className="system-admin-dashboard-message">{message}</p>}
+              {error && <p className="system-admin-dashboard-error">{error}</p>}
             </form>
-            <button className="hr-modal-close" onClick={toggleModal}>Close</button>
+            <button className="system-admin-modal-close" onClick={toggleModal}>Close</button>
           </div>
         </div>
       )}
@@ -99,4 +100,4 @@ function HRDashboard() {
   );
 }
 
-export default HRDashboard;
+export default SystemAdminDashboard;

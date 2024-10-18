@@ -10,6 +10,7 @@ import Register from "./Components/Register";
 import EmployeeDashboard from "./Components/EmployeeDashboard";
 import TeamManagerDashboard from "./Components/TeamManagerDashboard";
 import HRDashboard from "./Components/HRDashboard";
+import SystemAdminDashboard from "./Components/SystemAdminDashboard";
 function App() {
   return (
     <Router>
@@ -22,6 +23,10 @@ function App() {
           element={<TeamManagerDashboard />}
         />
         <Route path="/hr/dashboard" element={<HRDashboard />} />
+        <Route
+          path="/system_admin/dashboard"
+          element={<SystemAdminDashboard />}
+        />
         <Route path="/" element={<Navigate to="/login" />} />
       </Routes>
     </Router>
