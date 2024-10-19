@@ -1,0 +1,37 @@
+/* Styles for Performance Metrics Component */
+.performance-container {
+  padding: 20px;
+}
+
+.performance-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.performance-error {
+  color: red;
+  margin-bottom: 10px;
+}
+
+.performance-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.performance-card {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.performance-card h3 {
+  margin-bottom: 10px;
+}
+
+.performance-card p {
+  margin: 5px 0;
+  font-size: 16px;
+}

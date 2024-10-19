@@ -24,7 +24,7 @@ function App() {
         />
         <Route path="/hr/dashboard" element={<HRDashboard />} />
         <Route
-          path="/system_admin/dashboard"
+          path="admin/dashboard"
           element={<SystemAdminDashboard />}
         />
         <Route path="/" element={<Navigate to="/login" />} />
